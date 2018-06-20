@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Thesaurus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZcN-T1-MZf">
+                                <rect key="frame" x="94" y="95" width="187" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTY-k4-Sc1">
+                                <rect key="frame" x="131" y="162" width="113" height="30"/>
+                                <state key="normal" title="Show Synonyms"/>
+                                <connections>
+                                    <action selector="lookupSynomym:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G4m-Ip-cKQ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-4J-vHz">
+                                <rect key="frame" x="67" y="226" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cqb-4J-vHz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F2a-a0-NQO"/>
+                            <constraint firstItem="ZcN-T1-MZf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="G4c-Wc-4Ef"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cqb-4J-vHz" secondAttribute="bottom" constant="313" id="O9L-dc-dbR"/>
+                            <constraint firstItem="nTY-k4-Sc1" firstAttribute="centerX" secondItem="Cqb-4J-vHz" secondAttribute="centerX" id="UFF-UV-882"/>
+                            <constraint firstItem="Cqb-4J-vHz" firstAttribute="top" secondItem="nTY-k4-Sc1" secondAttribute="bottom" constant="34" id="WSO-EX-LIk"/>
+                            <constraint firstItem="ZcN-T1-MZf" firstAttribute="centerX" secondItem="nTY-k4-Sc1" secondAttribute="centerX" id="e5X-TU-5Ri"/>
+                            <constraint firstItem="Cqb-4J-vHz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="l5Z-ar-oga"/>
+                            <constraint firstItem="nTY-k4-Sc1" firstAttribute="top" secondItem="ZcN-T1-MZf" secondAttribute="bottom" constant="37" id="oU4-OU-lSQ"/>
+                            <constraint firstItem="ZcN-T1-MZf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="qfQ-yU-buj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="synonymLabel" destination="Cqb-4J-vHz" id="DwN-yp-XJ1"/>
+                        <outlet property="wordLookup" destination="ZcN-T1-MZf" id="lYi-y3-ge3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
